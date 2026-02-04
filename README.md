@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-Live demo of the DMARC Sentinel frontend showing email input, API request and real-time DMARC result rendering.
+Live demo of the DMARC frontend showing email input, API request and real-time DMARC result rendering.
 </p>
 <hr/><br>
 
