@@ -1,40 +1,58 @@
-DMARC Verification Frontend
+🛡️ DMARC Sentinel – Frontend
 
-A React-based frontend for a DMARC verification tool.
+A lightweight React frontend for a real-world DMARC verification tool.
+Built to analyze email domain security and help identify misconfigured or missing DMARC policies.
 
-This application allows a user to enter an email address and sends it to a backend API to check whether the domain has a valid DMARC record and which policy is configured.
+⚡ What this tool does
 
-Features
+Enter an email address →
+the frontend sends it to a backend API →
+the backend performs a live DNS lookup on the domain →
+and returns:
 
-Email input with basic validation
+whether DMARC is present
 
-Integration with a Go backend API
+the raw DMARC record
 
-Displays DMARC record, presence status and policy type
+the active policy (none, quarantine, reject)
 
-Clean UI with a separate result panel and footer links
+Results are shown instantly in a clean report panel.
 
-Backend API
+🔍 Why this matters
 
-This frontend expects a backend endpoint:
+DMARC is a core defense against:
+
+domain spoofing
+
+phishing campaigns
+
+email impersonation attacks
+
+This tool is built as a learning and analysis utility for email security and defensive tooling.
+
+🧠 Frontend highlights
+
+React (Create React App)
+
+Hooks-based state management
+
+API integration with a Go backend
+
+Real-time result rendering
+
+Minimal, tool-style UI
+
+🔌 Backend API
+
+The frontend connects to:
 
 POST http://localhost:8081/verify
 
 
-Request body:
+Payload:
 
-{
-  "email": "user@example.com"
-}
+{ "email": "user@example.com" }
 
-Tech Stack
+<B>👤 Authors</b>
 
-React (Create React App)
-
-JavaScript (Hooks: useState, useEffect)
-
-Custom CSS
-
-Authors
-
-Frontend: Prince
+Frontend – Prince Rajpurohit
